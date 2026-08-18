@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Humble Torrent Grabber Settings</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 500px; }
+    .field { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: bold; }
+    input { width: 100%; padding: 8px; box-sizing: border-box; }
+    button { padding: 10px 20px; cursor: pointer; background: #2ecc71; border: none; color: white; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>qBittorrent Settings</h1>
+  <div class="field">
+    <label for="url">Web UI URL</label>
+    <input type="text" id="url" placeholder="http://localhost:8080">
+  </div>
+  <div class="field">
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="admin">
+  </div>
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="adminadmin">
+  </div>
+  <button id="save">Save Settings</button>
+  <p id="status"></p>
+  <script src="options.js"></script>
+</body>
+</html>

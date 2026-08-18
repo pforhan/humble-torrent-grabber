@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Humble Grabber</title>
+  <style>
+    body { font-family: sans-serif; padding: 15px; width: 300px; }
+    .field { margin-bottom: 12px; }
+    label { display: block; margin-bottom: 4px; font-size: 0.9em; font-weight: bold; }
+    input { width: 100%; padding: 6px; box-sizing: border-box; }
+    button { 
+      width: 100%; padding: 10px; cursor: pointer; 
+      background: #2ecc71; border: none; color: white; 
+      font-weight: bold; margin-top: 10px; 
+    }
+    button:disabled { background: #ccc; }
+    #status { margin-top: 10px; font-size: 0.85em; white-space: pre-wrap; }
+    .error { color: red; }
+    .success { color: green; }
+  </style>
+</head>
+<body>
+  <h3 style="margin-top: 0;">Submit Torrents</h3>
+  
+  <div id="link-list-container" style="display: none; margin-bottom: 15px; border: 1px solid #ccc; padding: 10px; background: #f9f9f9;">
+    <label style="display: block; margin-bottom: 5px; font-weight: bold;"><span id="torrent-count">0</span> Torrents Found:</label>
+    <ul id="link-list" style="font-size: 0.75em; padding-left: 20px; max-height: 150px; overflow-y: auto; word-break: break-all; margin: 0;"></ul>
+  </div>
+
+  <div class="field">
+    <label for="savepath">Save Path</label>
+    <input type="text" id="savepath" placeholder="/home/user/Downloads">
+  </div>
+  <div class="field">
+    <label for="tags">Tags (comma separated)</label>
+    <input type="text" id="tags" placeholder="Humble, Games">
+  </div>
+  <button id="submit">Add Selected Torrents</button>
+  
+  <div id="connection-status" style="margin-top: 10px; font-size: 0.8em;"></div>
+  <div id="status" style="margin-top: 5px; font-size: 0.85em; white-space: pre-wrap;"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
